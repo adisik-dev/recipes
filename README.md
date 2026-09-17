@@ -58,6 +58,8 @@ Below the search box, a row of tag chips is generated automatically from every t
 
 The site uses a muted sage-green + warm paper palette with a serif heading font (Lora, loaded from Google Fonts) paired with clean sans-serif body text — an editorial, magazine-style look rather than a bright/playful one. Colors live as CSS variables at the top of `style.css`, so the whole palette (light and dark) can be changed in one place. The header logo and favicon are generated from `icon-192.png`.
 
+Each tag gets its own muted color automatically (sage, terracotta, dusty blue, mustard, plum, clay red — defined as `--tag-0` through `--tag-5` in `style.css`), used for the tag filter chips and as a colored accent stripe on each recipe card. The color is picked deterministically from the tag's name (see `tagColorClass` in `app.js`), so no manual assignment is needed when adding a new tag.
+
 ## Dark mode
 
 The site automatically follows your device's light/dark setting (`prefers-color-scheme` in `style.css`) — no toggle needed. It switches on its own if you change your phone or laptop's system theme.

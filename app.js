@@ -1,9 +1,19 @@
 let activeTag = null;
+const TAG_COLOR_COUNT = 6;
 
 function uniqueTags(recipes) {
   const set = new Set();
   recipes.forEach(r => r.tags.forEach(t => set.add(t)));
   return [...set].sort((a, b) => a.localeCompare(b));
+}
+
+function tagColorClass(tag) {
+  // djb2-style hash for a more even spread across colors than a plain char-code sum
+  let hash = 5381;
+  for (let i = 0; i < tag.length; i++) {
+    hash = ((hash << 5) + hash + tag.charCodeAt(i)) | 0;
+  }
+  return "tag-color-" + (Math.abs(hash) % TAG_COLOR_COUNT);
 }
 
 function renderTagFilters() {
@@ -13,7 +23,7 @@ function renderTagFilters() {
   for (const tag of uniqueTags(RECIPES)) {
     const btn = document.createElement("button");
     btn.type = "button";
-    btn.className = "tag-chip" + (tag === activeTag ? " active" : "");
+    btn.className = "tag-chip " + tagColorClass(tag) + (tag === activeTag ? " active" : "");
     btn.dir = "auto";
     btn.textContent = tag;
     btn.addEventListener("click", () => {
@@ -38,6 +48,9 @@ function renderRecipes(list) {
 
   for (const recipe of list) {
     const li = document.createElement("li");
+    if (recipe.tags.length > 0) {
+      li.className = tagColorClass(recipe.tags[0]);
+    }
     const a = document.createElement("a");
     a.href = recipe.url;
 
