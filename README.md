@@ -1,0 +1,82 @@
+# Recipe Site — Setup & Editing Guide
+
+**Live site:** https://adisik-dev.github.io/recipes/
+
+A free, static recipe website. No server, nothing exposed on your home network.
+
+## One-time setup (GitHub Pages)
+
+1. Go to https://github.com and create a free account if you don't have one.
+2. Create a new repository:
+   - Click **New repository**
+   - Name it `recipes` (or anything you like)
+   - Set it to **Public** (required for free GitHub Pages)
+   - Don't initialize with a README (you already have files)
+3. Upload these files to the repo. Easiest way without installing Git:
+   - On the repo page, click **Add file → Upload files**
+   - Drag in `index.html`, `style.css`, `app.js`, `recipes-data.js`, and the `recipes` folder
+   - Commit the changes
+4. Enable GitHub Pages:
+   - Go to **Settings → Pages**
+   - Under "Build and deployment", set **Source** to `Deploy from a branch`
+   - Branch: `main`, folder: `/ (root)`
+   - Save
+5. Wait ~1 minute. Your site will be live at:
+   `https://YOUR-USERNAME.github.io/recipes/`
+
+That URL works from your phone or laptop, anywhere with internet — nothing is hosted on your home network.
+
+## Adding a new recipe
+
+1. Copy `recipes/_template.html` and rename it, e.g. `recipes/chicken-curry.html`.
+2. Fill in the name, time, servings, tags, ingredients, and steps.
+3. Add an entry for it in `recipes-data.js` (this drives both the homepage list and search):
+   ```js
+   {
+     title: "Chicken Curry",
+     url: "recipes/chicken-curry.html",
+     tags: ["Dinner"],
+     time: "40 min"
+   }
+   ```
+4. Upload the changed/new files to GitHub (drag-and-drop via **Add file → Upload files**, or `git push` if you set up Git locally).
+5. Site updates automatically within about a minute.
+
+## Hebrew recipes
+
+Just write the recipe in Hebrew — no extra setup needed. Every content block (title, ingredients, steps, notes) uses `dir="auto"`, so it automatically displays right-to-left when the text is Hebrew, while the site header/navigation stays left-to-right. See `recipes/hummus.html` for a working example. Search also works fine with Hebrew text — try typing "חומוס" in the search box on the homepage.
+
+If a recipe title in `recipes-data.js` is in Hebrew, it'll show and search correctly too (see the `חומוס` entry already in there).
+
+## Search
+
+The homepage has a search box that filters recipes live as you type, matching against title and tags (in `recipes-data.js`). It's all client-side — no server or database needed, and it works whether the site is opened locally or on GitHub Pages.
+
+## Optional: editing with Git instead of drag-and-drop
+
+If you'd rather use Git from your laptop:
+
+```bash
+git init
+git add .
+git commit -m "Initial recipe site"
+git remote add origin https://github.com/YOUR-USERNAME/recipes.git
+git push -u origin main
+```
+
+After that, any local edit just needs:
+
+```bash
+git add .
+git commit -m "Add chicken curry recipe"
+git push
+```
+
+## Files
+
+- `index.html` — homepage with search box, lists all recipes
+- `style.css` — shared styling (mobile-friendly, RTL-aware)
+- `recipes-data.js` — list of all recipes (title, tags, time, link); edit this when adding/removing a recipe
+- `app.js` — renders the recipe list and powers the search box
+- `recipes/_template.html` — copy this to start a new recipe
+- `recipes/*.html` — individual recipes
