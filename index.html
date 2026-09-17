@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Recipes</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#c1622d">
 </head>
 <body>
   <header>
@@ -19,6 +24,7 @@
       dir="auto"
       autocomplete="off"
     >
+    <div class="tag-filters" id="tag-filters"></div>
     <ul class="recipe-list" id="recipe-list"></ul>
     <p class="empty-state" id="empty-state" style="display:none;">No recipes match your search.</p>
   </main>

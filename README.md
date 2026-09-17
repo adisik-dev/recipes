@@ -48,9 +48,17 @@ Just write the recipe in Hebrew — no extra setup needed. Every content block (
 
 If a recipe title in `recipes-data.js` is in Hebrew, it'll show and search correctly too (see the `חומוס` entry already in there).
 
-## Search
+## Search & tag filters
 
 The homepage has a search box that filters recipes live as you type, matching against title and tags (in `recipes-data.js`). It's all client-side — no server or database needed, and it works whether the site is opened locally or on GitHub Pages.
+
+Below the search box, a row of tag chips is generated automatically from every tag used in `recipes-data.js` — no extra setup needed when you add a recipe with a new tag, it just shows up as a filter. Click a chip to filter to that tag, click it again to clear.
+
+## Home screen icon
+
+The site has a favicon and a web app manifest (`manifest.json`), so on your phone you can open the site and use "Add to Home Screen" (Safari) or "Install app" (Chrome/Android) — it'll get its own icon (the fried egg logo) and open full-screen like a real app, no browser bar.
+
+Icon files: `favicon.ico`, `favicon-16.png`, `favicon-32.png`, `icon-192.png`, `icon-512.png`, `apple-touch-icon.png`. These were generated once and shouldn't need to change unless you want a different logo.
 
 ## Optional: editing with Git instead of drag-and-drop
 
@@ -74,9 +82,11 @@ git push
 
 ## Files
 
-- `index.html` — homepage with search box, lists all recipes
+- `index.html` — homepage with search box + tag filters, lists all recipes
 - `style.css` — shared styling (mobile-friendly, RTL-aware)
 - `recipes-data.js` — list of all recipes (title, tags, time, link); edit this when adding/removing a recipe
-- `app.js` — renders the recipe list and powers the search box
+- `app.js` — renders the recipe list, tag filter chips, and search
+- `manifest.json` — web app manifest for "Add to Home Screen"
+- `favicon.ico`, `favicon-*.png`, `icon-*.png`, `apple-touch-icon.png` — site/home screen icons
 - `recipes/_template.html` — copy this to start a new recipe
 - `recipes/*.html` — individual recipes

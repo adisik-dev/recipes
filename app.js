@@ -1,3 +1,30 @@
+let activeTag = null;
+
+function uniqueTags(recipes) {
+  const set = new Set();
+  recipes.forEach(r => r.tags.forEach(t => set.add(t)));
+  return [...set].sort((a, b) => a.localeCompare(b));
+}
+
+function renderTagFilters() {
+  const container = document.getElementById("tag-filters");
+  container.innerHTML = "";
+
+  for (const tag of uniqueTags(RECIPES)) {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "tag-chip" + (tag === activeTag ? " active" : "");
+    btn.dir = "auto";
+    btn.textContent = tag;
+    btn.addEventListener("click", () => {
+      activeTag = activeTag === tag ? null : tag;
+      renderTagFilters();
+      applyFilters();
+    });
+    container.appendChild(btn);
+  }
+}
+
 function renderRecipes(list) {
   const ul = document.getElementById("recipe-list");
   const empty = document.getElementById("empty-state");
@@ -30,18 +57,27 @@ function renderRecipes(list) {
   }
 }
 
-function matches(recipe, query) {
+function matchesQuery(recipe, query) {
   const haystack = [recipe.title, ...recipe.tags].join(" ").toLowerCase();
   return haystack.includes(query.toLowerCase());
 }
 
+function applyFilters() {
+  const query = document.getElementById("search").value.trim();
+  let filtered = RECIPES;
+
+  if (activeTag) {
+    filtered = filtered.filter(r => r.tags.includes(activeTag));
+  }
+  if (query !== "") {
+    filtered = filtered.filter(r => matchesQuery(r, query));
+  }
+  renderRecipes(filtered);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+  renderTagFilters();
   renderRecipes(RECIPES);
 
-  const searchBox = document.getElementById("search");
-  searchBox.addEventListener("input", () => {
-    const query = searchBox.value.trim();
-    const filtered = query === "" ? RECIPES : RECIPES.filter(r => matches(r, query));
-    renderRecipes(filtered);
-  });
+  document.getElementById("search").addEventListener("input", applyFilters);
 });
