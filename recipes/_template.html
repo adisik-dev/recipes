@@ -25,7 +25,10 @@
     <div class="recipe-meta" dir="auto">
       <span>⏱ TIME</span>
       <span>🍽 SERVINGS</span>
-      <span>🏷 TAGS</span>
+      <div class="recipe-tags">
+        <span class="recipe-tag" data-tag="TAG1">TAG1</span>
+        <span class="recipe-tag" data-tag="TAG2">TAG2</span>
+      </div>
     </div>
 
     <h2>Ingredients</h2>
@@ -45,5 +48,12 @@
       <li>Optional notes</li>
     </ul>
   </main>
+
+  <script src="../tag-colors.js"></script>
+  <script>
+    document.querySelectorAll(".recipe-tag").forEach(el => {
+      el.classList.add(tagColorClass(el.dataset.tag));
+    });
+  </script>
 </body>
 </html>

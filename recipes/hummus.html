@@ -25,7 +25,9 @@
     <div class="recipe-meta" dir="auto">
       <span>⏱ 15 דקות</span>
       <span>🍽 4 מנות</span>
-      <span>🏷 מטבח ישראלי</span>
+      <div class="recipe-tags" dir="auto">
+        <span class="recipe-tag" data-tag="מטבח ישראלי">מטבח ישראלי</span>
+      </div>
     </div>
 
     <h2>מצרכים</h2>
@@ -51,5 +53,12 @@
       <li>לטעם עשיר יותר, מומלץ להשתמש בחומוס טרי ולא משומר.</li>
     </ul>
   </main>
+
+  <script src="../tag-colors.js"></script>
+  <script>
+    document.querySelectorAll(".recipe-tag").forEach(el => {
+      el.classList.add(tagColorClass(el.dataset.tag));
+    });
+  </script>
 </body>
 </html>

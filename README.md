@@ -29,7 +29,7 @@ That URL works from your phone or laptop, anywhere with internet — nothing is 
 ## Adding a new recipe
 
 1. Copy `recipes/_template.html` and rename it, e.g. `recipes/chicken-curry.html`.
-2. Fill in the name, time, servings, tags, ingredients, and steps.
+2. Fill in the name, time, servings, ingredients, and steps. For tags, add one `<span class="recipe-tag" data-tag="Dinner">Dinner</span>` per tag inside `.recipe-tags` — the color is applied automatically, just make sure the tag text matches what you use in `recipes-data.js`.
 3. Add an entry for it in `recipes-data.js` (this drives both the homepage list and search):
    ```js
    {
@@ -58,7 +58,7 @@ Below the search box, a row of tag chips is generated automatically from every t
 
 The site uses a muted sage-green + warm paper palette with a serif heading font (Lora, loaded from Google Fonts) paired with clean sans-serif body text — an editorial, magazine-style look rather than a bright/playful one. Colors live as CSS variables at the top of `style.css`, so the whole palette (light and dark) can be changed in one place. The header logo and favicon are generated from `icon-192.png`.
 
-Each tag gets its own muted color automatically (sage, terracotta, dusty blue, mustard, plum, clay red — defined as `--tag-0` through `--tag-5` in `style.css`), used for the tag filter chips and as a colored accent stripe on each recipe card. The color is picked deterministically from the tag's name (see `tagColorClass` in `app.js`), so no manual assignment is needed when adding a new tag.
+Each tag gets its own muted color automatically (sage, terracotta, dusty blue, mustard, plum, clay red — defined as `--tag-0` through `--tag-5` in `style.css`), used for the tag filter chips, the colored accent stripe on each homepage card, the tag pills on individual recipe pages, and the bullet/step-number color. The color is picked deterministically from the tag's name (see `tagColorClass` in `tag-colors.js`, shared by the homepage and every recipe page), so no manual assignment is needed when adding a new tag.
 
 ## Dark mode
 
@@ -96,6 +96,7 @@ git push
 - `style.css` — shared styling (mobile-friendly, RTL-aware)
 - `recipes-data.js` — list of all recipes (title, tags, time, link); edit this when adding/removing a recipe
 - `app.js` — renders the recipe list, tag filter chips, and search
+- `tag-colors.js` — shared color logic for tags, used by the homepage and every recipe page
 - `manifest.json` — web app manifest for "Add to Home Screen"
 - `favicon.ico`, `favicon-*.png`, `icon-*.png`, `apple-touch-icon.png` — site/home screen icons
 - `recipes/_template.html` — copy this to start a new recipe

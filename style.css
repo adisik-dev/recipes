@@ -220,12 +220,38 @@ main {
 .recipe-meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 20px;
+  align-items: center;
+  gap: 8px 12px;
   margin: 10px 0 28px;
   font-size: 0.85rem;
   letter-spacing: 0.02em;
   color: var(--text-muted);
 }
+
+.recipe-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.recipe-tag {
+  padding: 4px 12px;
+  font-size: 0.72rem;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  background: var(--border);
+  color: var(--text-muted);
+}
+
+.recipe-tag.tag-color-0 { background: var(--tag-0-bg); color: var(--tag-0-text); }
+.recipe-tag.tag-color-1 { background: var(--tag-1-bg); color: var(--tag-1-text); }
+.recipe-tag.tag-color-2 { background: var(--tag-2-bg); color: var(--tag-2-text); }
+.recipe-tag.tag-color-3 { background: var(--tag-3-bg); color: var(--tag-3-text); }
+.recipe-tag.tag-color-4 { background: var(--tag-4-bg); color: var(--tag-4-text); }
+.recipe-tag.tag-color-5 { background: var(--tag-5-bg); color: var(--tag-5-text); }
 
 h1 {
   font-family: var(--font-serif);
@@ -251,6 +277,15 @@ ul.ingredients, ol.steps {
 
 ul.ingredients li, ol.steps li {
   margin-bottom: 10px;
+}
+
+ul.ingredients li::marker {
+  color: var(--accent);
+}
+
+ol.steps li::marker {
+  color: var(--accent);
+  font-weight: 700;
 }
 
 .back-link {

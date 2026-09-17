@@ -25,7 +25,10 @@
     <div class="recipe-meta" dir="auto">
       <span>⏱ 15 min</span>
       <span>🍽 2 servings</span>
-      <span>🏷 Japanese, Soup</span>
+      <div class="recipe-tags">
+        <span class="recipe-tag" data-tag="Japanese">Japanese</span>
+        <span class="recipe-tag" data-tag="Soup">Soup</span>
+      </div>
     </div>
 
     <h2>Ingredients</h2>
@@ -51,5 +54,12 @@
       <li>Adjust miso to taste — start with less, add more.</li>
     </ul>
   </main>
+
+  <script src="../tag-colors.js"></script>
+  <script>
+    document.querySelectorAll(".recipe-tag").forEach(el => {
+      el.classList.add(tagColorClass(el.dataset.tag));
+    });
+  </script>
 </body>
 </html>
