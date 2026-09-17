@@ -54,6 +54,14 @@ The homepage has a search box that filters recipes live as you type, matching ag
 
 Below the search box, a row of tag chips is generated automatically from every tag used in `recipes-data.js` — no extra setup needed when you add a recipe with a new tag, it just shows up as a filter. Click a chip to filter to that tag, click it again to clear.
 
+## Design
+
+The site uses a muted sage-green + warm paper palette with a serif heading font (Lora, loaded from Google Fonts) paired with clean sans-serif body text — an editorial, magazine-style look rather than a bright/playful one. Colors live as CSS variables at the top of `style.css`, so the whole palette (light and dark) can be changed in one place. The header logo and favicon are generated from `icon-192.png`.
+
+## Dark mode
+
+The site automatically follows your device's light/dark setting (`prefers-color-scheme` in `style.css`) — no toggle needed. It switches on its own if you change your phone or laptop's system theme.
+
 ## Home screen icon
 
 The site has a favicon and a web app manifest (`manifest.json`), so on your phone you can open the site and use "Add to Home Screen" (Safari) or "Install app" (Chrome/Android) — it'll get its own icon (the fried egg logo) and open full-screen like a real app, no browser bar.

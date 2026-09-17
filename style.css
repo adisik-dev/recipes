@@ -1,42 +1,76 @@
 :root {
-  --bg: #fffaf5;
-  --text: #2b2320;
-  --accent: #c1622d;
+  --bg: #f7f5f0;
+  --text: #211f1c;
+  --text-muted: #6f6a60;
+  --accent: #3f5d4a;
+  --accent-contrast: #ffffff;
   --card-bg: #ffffff;
-  --border: #eadfd3;
+  --border: #e3ded2;
   --max-width: 720px;
+  --font-serif: "Lora", Georgia, "Times New Roman", serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #161512;
+    --text: #ece8df;
+    --text-muted: #9a9488;
+    --accent: #82a88f;
+    --accent-contrast: #161512;
+    --card-bg: #201e1a;
+    --border: #322f28;
+  }
 }
 
 * { box-sizing: border-box; }
 
 body {
   margin: 0;
-  padding: 0 16px 60px;
+  padding: 0 20px 72px;
   background: var(--bg);
   color: var(--text);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  font-family: var(--font-sans);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
 }
 
 header {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 32px 0 16px;
+  padding: 40px 0 20px;
+  border-bottom: 1px solid var(--border);
 }
 
 header h1 {
   margin: 0;
-  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 1.6rem;
+  letter-spacing: 0.01em;
 }
 
 header h1 a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   color: var(--text);
   text-decoration: none;
+}
+
+header h1 img {
+  width: 30px;
+  height: 30px;
+  border-radius: 7px;
 }
 
 main {
   max-width: var(--max-width);
   margin: 0 auto;
+  padding-top: 28px;
 }
 
 /* Recipe list on the homepage */
@@ -44,30 +78,39 @@ main {
   list-style: none;
   padding: 0;
   display: grid;
-  gap: 12px;
+  gap: 10px;
 }
 
 .recipe-list li {
   background: var(--card-bg);
   border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius: 8px;
+  transition: border-color 0.15s ease;
+}
+
+.recipe-list li:hover {
+  border-color: var(--accent);
 }
 
 .recipe-list a {
   display: block;
-  padding: 16px 18px;
+  padding: 18px 20px;
   color: var(--text);
   text-decoration: none;
-  font-size: 1.05rem;
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
   font-weight: 600;
 }
 
 .recipe-list a .tags {
   display: block;
+  font-family: var(--font-sans);
   font-weight: 400;
-  font-size: 0.85rem;
-  color: #7a6f64;
-  margin-top: 4px;
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 6px;
 }
 
 .recipe-list li.hidden {
@@ -75,26 +118,31 @@ main {
 }
 
 .empty-state {
-  color: #7a6f64;
+  color: var(--text-muted);
   padding: 16px 2px;
 }
 
 /* Search box */
 .search-box {
   width: 100%;
-  padding: 12px 14px;
+  padding: 13px 16px;
   font-size: 1rem;
   border: 1px solid var(--border);
-  border-radius: 10px;
-  margin-bottom: 16px;
+  border-radius: 8px;
+  margin-bottom: 18px;
   background: var(--card-bg);
   color: var(--text);
   font-family: inherit;
 }
 
+.search-box::placeholder {
+  color: var(--text-muted);
+}
+
 .search-box:focus {
-  outline: 2px solid var(--accent);
-  outline-offset: 1px;
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 20%, transparent);
 }
 
 /* Tag filter chips */
@@ -102,28 +150,32 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 
 .tag-chip {
   padding: 6px 14px;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   border: 1px solid var(--border);
   border-radius: 999px;
-  background: var(--card-bg);
-  color: var(--text);
-  font-family: inherit;
+  background: transparent;
+  color: var(--text-muted);
+  font-family: var(--font-sans);
   cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease;
 }
 
 .tag-chip:hover {
   border-color: var(--accent);
+  color: var(--accent);
 }
 
 .tag-chip.active {
   background: var(--accent);
   border-color: var(--accent);
-  color: #fff;
+  color: var(--accent-contrast);
 }
 
 /* Individual recipe page */
@@ -131,15 +183,28 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 8px 20px;
-  margin: 8px 0 24px;
-  font-size: 0.9rem;
-  color: #7a6f64;
+  margin: 10px 0 28px;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  color: var(--text-muted);
+}
+
+h1 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  letter-spacing: 0.005em;
 }
 
 h2 {
-  border-bottom: 2px solid var(--accent);
-  padding-bottom: 6px;
-  margin-top: 32px;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 10px;
+  margin-top: 36px;
 }
 
 ul.ingredients, ol.steps {
@@ -147,20 +212,21 @@ ul.ingredients, ol.steps {
 }
 
 ul.ingredients li, ol.steps li {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .back-link {
   display: inline-block;
-  margin-bottom: 16px;
-  color: var(--accent);
+  margin-bottom: 18px;
+  color: var(--text-muted);
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
 }
 
-.back-link:hover { text-decoration: underline; }
+.back-link:hover { color: var(--accent); }
 
 @media (max-width: 480px) {
-  header { padding: 20px 0 12px; }
-  header h1 { font-size: 1.5rem; }
+  header { padding: 28px 0 16px; }
+  header h1 { font-size: 1.35rem; }
 }
