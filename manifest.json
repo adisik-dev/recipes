@@ -1,6 +1,6 @@
 {
-  "name": "My Recipes",
-  "short_name": "Recipes",
+  "name": "המתכונים שלי",
+  "short_name": "מתכונים",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#f7f5f0",

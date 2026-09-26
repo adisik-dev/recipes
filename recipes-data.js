@@ -2,16 +2,16 @@
 // "tags" is also what search matches against, along with the title.
 const RECIPES = [
   {
-    title: "Miso Soup",
+    title: "מרק מיסו",
     url: "recipes/miso-soup.html",
-    tags: ["Japanese", "Soup"],
-    time: "15 min"
+    tags: ["יפני", "מרק"],
+    time: "15 דקות"
   },
   {
-    title: "Banana Pancakes",
+    title: "פנקייק בננה",
     url: "recipes/banana-pancakes.html",
-    tags: ["Breakfast"],
-    time: "20 min"
+    tags: ["ארוחת בוקר"],
+    time: "20 דקות"
   },
   {
     title: "חומוס",
