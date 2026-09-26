@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>פנקייק קלאסי ב-10 דקות | המתכונים שלי</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" href="../icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="#3f5d4a" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#161512" media="(prefers-color-scheme: dark)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1><a href="../index.html"><img src="../icon-192.png" alt=""> המתכונים שלי</a></h1>
+  </header>
+  <main>
+    <a class="back-link" href="../index.html">&rarr; כל המתכונים</a>
+    <h1 dir="auto">פנקייק קלאסי ב-10 דקות</h1>
+    <div class="recipe-meta" dir="auto">
+      <span>⏱ 10 דקות</span>
+      <span>🍽 6-8 יחידות</span>
+      <div class="recipe-tags" dir="auto">
+        <span class="recipe-tag" data-tag="ארוחת בוקר">ארוחת בוקר</span>
+        <span class="recipe-tag" data-tag="קינוחים">קינוחים</span>
+      </div>
+    </div>
+
+    <h2>מצרכים</h2>
+    <ul class="ingredients" dir="auto">
+      <li>1 כוס קמח לבן (140 גרם)</li>
+      <li>1 כפית אבקת אפייה (5 גרם)</li>
+      <li>1 שקית סוכר וניל (10 גרם)</li>
+      <li>2 כפות סוכר (25 גרם)</li>
+      <li>1 ביצה</li>
+      <li>2 כפות שמן</li>
+      <li>1 כוס חלב (240 מ"ל)</li>
+      <li>קמצוץ מלח</li>
+      <li>סירופ מייפל/שוקולד (להגשה)</li>
+    </ul>
+
+    <h2>הוראות הכנה</h2>
+    <ol class="steps" dir="auto">
+      <li>מערבבים היטב את כל החומרים בקערה עם מטרפה, עד לקבלת בלילה חלקה.</li>
+      <li>משמנים מחבת פנקייק או מחבת רגילה עם ציפוי נון-סטיק, וכשהמחבת חמה יוצקים את הבלילה למחבת בעזרת מצקת.</li>
+      <li>לאחר כדקה, כשמופיעות בועות קטנות בחלק העליון של הפנקייק, הופכים צד ומשאירים עוד חצי דקה נוספת.</li>
+    </ol>
+
+    <h2>הערות</h2>
+    <ul dir="auto">
+      <li>מתכון מקור: <a href="https://www.10dakot.co.il/recipe/%D7%9E%D7%AA%D7%9B%D7%95%D7%9F-%D7%9C%D7%A4%D7%A0%D7%A7%D7%99%D7%99%D7%A7/">10dakot.co.il</a></li>
+    </ul>
+  </main>
+
+  <script src="../tag-colors.js"></script>
+  <script>
+    document.querySelectorAll(".recipe-tag").forEach(el => {
+      el.classList.add(tagColorClass(el.dataset.tag));
+    });
+  </script>
+</body>
+</html>

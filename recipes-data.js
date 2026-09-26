@@ -90,5 +90,11 @@ const RECIPES = [
     url: "recipes/pinati-meatballs.html",
     tags: ["מנות עיקריות", "בשר"],
     time: "2 שעות"
+  },
+  {
+    title: "פנקייק קלאסי ב-10 דקות",
+    url: "recipes/classic-pancakes-10-minutes.html",
+    tags: ["ארוחת בוקר", "קינוחים"],
+    time: "10 דקות"
   }
 ];
