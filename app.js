@@ -1,5 +1,10 @@
 let activeTag = null;
 
+// Sections appear on the homepage in this order. Anything with an
+// unlisted category still shows, grouped at the end under "אחר".
+const CATEGORY_ORDER = ["ארוחת בוקר", "מנה ראשונה", "מרק", "מנה עיקרית", "קינוח"];
+const OTHER_CATEGORY = "אחר";
+
 function uniqueTags(recipes) {
   const set = new Set();
   recipes.forEach(r => r.tags.forEach(t => set.add(t)));
@@ -25,10 +30,49 @@ function renderTagFilters() {
   }
 }
 
+function groupByCategory(list) {
+  const groups = new Map();
+  for (const recipe of list) {
+    const category = recipe.category || OTHER_CATEGORY;
+    if (!groups.has(category)) groups.set(category, []);
+    groups.get(category).push(recipe);
+  }
+
+  const orderedCategories = [
+    ...CATEGORY_ORDER.filter(c => groups.has(c)),
+    ...[...groups.keys()].filter(c => !CATEGORY_ORDER.includes(c)).sort((a, b) => a.localeCompare(b))
+  ];
+
+  return orderedCategories.map(category => ({ category, recipes: groups.get(category) }));
+}
+
+function buildRecipeCard(recipe) {
+  const li = document.createElement("li");
+  if (recipe.tags.length > 0) {
+    li.className = tagColorClass(recipe.tags[0]);
+  }
+  const a = document.createElement("a");
+  a.href = recipe.url;
+
+  const title = document.createElement("span");
+  title.dir = "auto";
+  title.textContent = recipe.title;
+
+  const tags = document.createElement("span");
+  tags.className = "tags";
+  tags.dir = "auto";
+  tags.textContent = [...recipe.tags, recipe.time].filter(Boolean).join(" · ");
+
+  a.appendChild(title);
+  a.appendChild(tags);
+  li.appendChild(a);
+  return li;
+}
+
 function renderRecipes(list) {
-  const ul = document.getElementById("recipe-list");
+  const container = document.getElementById("recipe-list");
   const empty = document.getElementById("empty-state");
-  ul.innerHTML = "";
+  container.innerHTML = "";
 
   if (list.length === 0) {
     empty.style.display = "block";
@@ -36,27 +80,22 @@ function renderRecipes(list) {
   }
   empty.style.display = "none";
 
-  for (const recipe of list) {
-    const li = document.createElement("li");
-    if (recipe.tags.length > 0) {
-      li.className = tagColorClass(recipe.tags[0]);
-    }
-    const a = document.createElement("a");
-    a.href = recipe.url;
+  for (const { category, recipes } of groupByCategory(list)) {
+    const section = document.createElement("section");
+    section.className = "recipe-section";
 
-    const title = document.createElement("span");
-    title.dir = "auto";
-    title.textContent = recipe.title;
+    const heading = document.createElement("h2");
+    heading.className = "category-heading";
+    heading.dir = "auto";
+    heading.textContent = category;
+    section.appendChild(heading);
 
-    const tags = document.createElement("span");
-    tags.className = "tags";
-    tags.dir = "auto";
-    tags.textContent = [...recipe.tags, recipe.time].filter(Boolean).join(" · ");
+    const ul = document.createElement("ul");
+    ul.className = "recipe-list";
+    recipes.forEach(recipe => ul.appendChild(buildRecipeCard(recipe)));
+    section.appendChild(ul);
 
-    a.appendChild(title);
-    a.appendChild(tags);
-    li.appendChild(a);
-    ul.appendChild(li);
+    container.appendChild(section);
   }
 }
 

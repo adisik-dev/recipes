@@ -7,8 +7,8 @@
   --card-bg: #ffffff;
   --border: #e3ded2;
   --max-width: 720px;
-  --font-serif: "Lora", Georgia, "Times New Roman", serif;
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-serif: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  --font-sans: Arial, "Helvetica Neue", Helvetica, sans-serif;
 
   /* Tag category colors — a muted, editorial-friendly palette */
   --tag-0-bg: #eaf1ec; --tag-0-text: #3f5d4a; /* sage */
@@ -88,10 +88,27 @@ main {
   padding-top: 28px;
 }
 
-/* Recipe list on the homepage */
+/* Recipe list on the homepage, grouped into category sections */
+.recipe-section {
+  margin-bottom: 28px;
+}
+
+.category-heading {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  margin: 0 0 12px;
+  padding: 0;
+  border-bottom: none;
+  text-transform: none;
+}
+
 .recipe-list {
   list-style: none;
   padding: 0;
+  margin: 0;
   display: grid;
   gap: 10px;
 }
