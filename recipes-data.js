@@ -8,18 +8,6 @@ const RECIPES = [
     time: "15 דקות"
   },
   {
-    title: "פנקייק בננה",
-    url: "recipes/banana-pancakes.html",
-    tags: ["ארוחת בוקר"],
-    time: "20 דקות"
-  },
-  {
-    title: "חומוס",
-    url: "recipes/hummus.html",
-    tags: ["מטבח ישראלי"],
-    time: "15 דקות"
-  },
-  {
     title: "אצבעות שניצל לילדים",
     url: "recipes/schnitzel-fingers-kids.html",
     tags: ["אוכל לילדים", "מנות עיקריות"],
