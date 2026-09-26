@@ -7,8 +7,8 @@
   --card-bg: #ffffff;
   --border: #e3ded2;
   --max-width: 720px;
-  --font-serif: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  --font-sans: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  --font-serif: "Arimo", Arial, "Arial Hebrew", "Helvetica Neue", Helvetica, sans-serif;
+  --font-sans: "Arimo", Arial, "Arial Hebrew", "Helvetica Neue", Helvetica, sans-serif;
 
   /* Tag category colors — a muted, editorial-friendly palette */
   --tag-0-bg: #eaf1ec; --tag-0-text: #3f5d4a; /* sage */
