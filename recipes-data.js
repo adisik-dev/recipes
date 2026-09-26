@@ -96,5 +96,11 @@ const RECIPES = [
     url: "recipes/classic-pancakes-10-minutes.html",
     tags: ["ארוחת בוקר", "קינוחים"],
     time: "10 דקות"
+  },
+  {
+    title: "שניצל של אבא",
+    url: "recipes/dads-schnitzel.html",
+    tags: ["מנות עיקריות", "איירפרייר"],
+    time: "45 דקות"
   }
 ];
