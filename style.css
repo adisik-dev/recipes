@@ -88,27 +88,10 @@ main {
   padding-top: 28px;
 }
 
-/* Recipe list on the homepage, grouped into category sections */
-.recipe-section {
-  margin-bottom: 28px;
-}
-
-.category-heading {
-  font-family: var(--font-sans);
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  color: var(--accent);
-  margin: 0 0 12px;
-  padding: 0;
-  border-bottom: none;
-  text-transform: none;
-}
-
+/* Recipe list on the homepage */
 .recipe-list {
   list-style: none;
   padding: 0;
-  margin: 0;
   display: grid;
   gap: 10px;
 }
