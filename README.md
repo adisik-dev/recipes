@@ -66,7 +66,7 @@ The site automatically follows your device's light/dark setting (`prefers-color-
 
 ## Home screen icon
 
-The site has a favicon and a web app manifest (`manifest.json`), so on your phone you can open the site and use "Add to Home Screen" (Safari) or "Install app" (Chrome/Android) — it'll get its own icon (the fried egg logo) and open full-screen like a real app, no browser bar.
+The site has a favicon and a web app manifest (`manifest.json`), so on your phone you can open the site and use "Add to Home Screen" (Safari) or "Install app" (Chrome/Android) — it'll get its own icon (the little chef dragon) and open full-screen like a real app, no browser bar.
 
 Icon files: `favicon.ico`, `favicon-16.png`, `favicon-32.png`, `icon-192.png`, `icon-512.png`, `apple-touch-icon.png`. These were generated once and shouldn't need to change unless you want a different logo.
 
