@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>קציצות פינתי | My Recipes</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" href="../icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="#3f5d4a" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#161512" media="(prefers-color-scheme: dark)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1><a href="../index.html"><img src="../icon-192.png" alt=""> My Recipes</a></h1>
+  </header>
+  <main>
+    <a class="back-link" href="../index.html">&larr; All recipes</a>
+    <h1 dir="auto">קציצות פינתי</h1>
+    <div class="recipe-meta" dir="auto">
+      <span>⏱ כ-2 שעות</span>
+      <span>🍽 כ-6 מנות</span>
+      <div class="recipe-tags" dir="auto">
+        <span class="recipe-tag" data-tag="מנות עיקריות">מנות עיקריות</span>
+        <span class="recipe-tag" data-tag="בשר">בשר</span>
+      </div>
+    </div>
+
+    <h2>מצרכים</h2>
+    <ul class="ingredients" dir="auto">
+      <li>קילו בשר טחון</li>
+      <li>כוס פירורי לחם</li>
+      <li>2 ביצים</li>
+      <li>בצל גדול קצוץ</li>
+      <li>6 שיני שום קצוץ</li>
+      <li>מלח, פלפל, פפריקה, כמון, ראס אל חנות, בהרט, סוכר</li>
+      <li>קופסת רסק עגבניות</li>
+      <li>קופסת עגבניות קוביות במיץ</li>
+      <li>כוס שמן (לטיגון — רוב השמן נזרק בהמשך)</li>
+      <li>6 כפות שמן זית</li>
+    </ul>
+
+    <h2>הוראות הכנה</h2>
+    <ol class="steps" dir="auto">
+      <li>שמים במעבד מזון, מגררים בפומפייה או חותכים דק: בצל אחד גדול ו-3 שיני שום.</li>
+      <li>מוסיפים לקערה את הבשר הטחון, כף מלח, כפית פלפל שחור, כף פפריקה, כף ראס אל חנות, כפית בהרט, כף כמון, 2 הביצים וכוס פירורי הלחם. מערבבים לתערובת אחידה ומעבירים לשק זילוף.</li>
+      <li>בסיר סוטאז' שמים שמן זית, ומוציאים מהשק זילוף קציצות ארוכות בלחיצה — כמו נקניקיות. אפשר לטגן בשמן עמוק עד שמכהות; זה לא שרוף, כך הן צריכות להיראות.</li>
+      <li>ברגע שצד אחד השחים הופכים לצד השני, וברגע שהקציצות מטוגנות מוציאים אותן לצלחת.</li>
+      <li>נפטרים מרוב השמן בסיר, אבל משאירים מעט.</li>
+      <li>מטגנים קלות את שאר השום, מוסיפים את קופסת העגבניות הקוביות במיץ, 3 כפות רסק, כף פפריקה, כפית פלפל שחור, כפית מלח וכף בהרט. מערבבים, מוסיפים ליטר מים ומרתיחים כ-10 דקות (הרוטב יהיה דליל בשלב הזה — זה תקין).</li>
+      <li>מוסיפים את הקציצות, מכסים כשהמכסה נשאר פתוח מעט, ומבשלים כשעה-שעה ורבע, עד שהרוטב מסמיך והקציצה רכה.</li>
+      <li>מגישים עם אורז.</li>
+    </ol>
+
+    <h2>הערות</h2>
+    <ul dir="auto">
+      <li>מתוך סדרת "אתם פשוט עצלנים" (חלק 12).</li>
+    </ul>
+  </main>
+
+  <script src="../tag-colors.js"></script>
+  <script>
+    document.querySelectorAll(".recipe-tag").forEach(el => {
+      el.classList.add(tagColorClass(el.dataset.tag));
+    });
+  </script>
+</body>
+</html>

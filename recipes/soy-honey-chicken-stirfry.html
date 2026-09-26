@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>עוף מוקפץ ברוטב סויה ודבש | My Recipes</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" href="../icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="#3f5d4a" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#161512" media="(prefers-color-scheme: dark)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1><a href="../index.html"><img src="../icon-192.png" alt=""> My Recipes</a></h1>
+  </header>
+  <main>
+    <a class="back-link" href="../index.html">&larr; All recipes</a>
+    <h1 dir="auto">עוף מוקפץ ברוטב סויה ודבש</h1>
+    <div class="recipe-meta" dir="auto">
+      <span>⏱ כ-30 דקות</span>
+      <span>🍽 כ-3 מנות (משוער)</span>
+      <div class="recipe-tags" dir="auto">
+        <span class="recipe-tag" data-tag="מנות עיקריות">מנות עיקריות</span>
+        <span class="recipe-tag" data-tag="עוף">עוף</span>
+      </div>
+    </div>
+
+    <h2>מצרכים</h2>
+    <ul class="ingredients" dir="auto">
+      <li><strong>עוף:</strong> 400 גרם חזה עוף חתוך לקוביות</li>
+      <li><strong>למשרה:</strong> 3 כפות קורנפלור</li>
+      <li>כפית סודה לשתייה</li>
+      <li>4 כפות סויה בהירה</li>
+      <li>מלח ופלפל גרוס (להמלחה אחרי הצריבה)</li>
+      <li><strong>לרוטב:</strong> 2 כפות סויה בהירה</li>
+      <li>2 כפות סויה כהה</li>
+      <li>2 כפות דבש</li>
+      <li>חצי כפית צ'ילי גרוס</li>
+      <li>כף סוכר</li>
+      <li>שן שום מגורדת</li>
+      <li><strong>לירקות:</strong> פלפל אדום (גמבה), חתוך לקוביות גדולות</li>
+      <li>פלפל ירוק חריף או רגיל, חתוך לקוביות</li>
+      <li>2 שיני שום פרוסות</li>
+      <li>2 כפות שמן להקפצה</li>
+      <li><strong>לסמכה:</strong> כפית קורנפלור + מעט מים קרים</li>
+      <li>שומשום קלוי לקישוט</li>
+    </ul>
+
+    <h2>הוראות הכנה</h2>
+    <ol class="steps" dir="auto">
+      <li>משרים את קוביות העוף במשרה (קורנפלור, סודה לשתייה, סויה בהירה) למשך כמה דקות.</li>
+      <li>מטגנים את העוף על מחבת חמה עד לצריבה יפה, מעבירים לצלחת וממליחים במלח ופלפל גרוס.</li>
+      <li>מערבבים בקערה את מצרכי הרוטב: סויה בהירה, סויה כהה, דבש, צ'ילי גרוס, סוכר ושום מגורד.</li>
+      <li>מקפיצים את הפלפל האדום, הפלפל הירוק ושיני השום הפרוסות עם 2 כפות שמן.</li>
+      <li>מוסיפים את העוף הצרוב למחבת עם הירקות ומקפיצים יחד עם הרוטב.</li>
+      <li>מוסיפים את תערובת הקורנפלור והמים ומבשלים עד שהרוטב מסמיך.</li>
+      <li>מקשטים בשומשום קלוי ומגישים.</li>
+    </ol>
+
+    <h2>הערות</h2>
+    <ul dir="auto">
+      <li>זמן ומספר המנות משוערים — לא צוינו במקור.</li>
+    </ul>
+  </main>
+
+  <script src="../tag-colors.js"></script>
+  <script>
+    document.querySelectorAll(".recipe-tag").forEach(el => {
+      el.classList.add(tagColorClass(el.dataset.tag));
+    });
+  </script>
+</body>
+</html>

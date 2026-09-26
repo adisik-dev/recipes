@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>עוף בדבש וגוצ'וג'אנג | My Recipes</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" href="../icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="#3f5d4a" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#161512" media="(prefers-color-scheme: dark)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1><a href="../index.html"><img src="../icon-192.png" alt=""> My Recipes</a></h1>
+  </header>
+  <main>
+    <a class="back-link" href="../index.html">&larr; All recipes</a>
+    <h1 dir="auto">עוף בדבש וגוצ'וג'אנג</h1>
+    <div class="recipe-meta" dir="auto">
+      <span>⏱ 20 דקות</span>
+      <span>🍽 2 מנות</span>
+      <div class="recipe-tags" dir="auto">
+        <span class="recipe-tag" data-tag="מנות עיקריות">מנות עיקריות</span>
+        <span class="recipe-tag" data-tag="עוף">עוף</span>
+        <span class="recipe-tag" data-tag="מטבח קוריאני">מטבח קוריאני</span>
+      </div>
+    </div>
+
+    <h2>מצרכים</h2>
+    <ul class="ingredients" dir="auto">
+      <li><strong>לרוטב:</strong> כף גוצ'וג'אנג (משחת צ'ילי קוריאנית)</li>
+      <li>כף מירין</li>
+      <li>כף דבש</li>
+      <li>כף רוטב סויה</li>
+      <li><strong>לעוף:</strong> 2 שיני שום</li>
+      <li>חזה עוף אחד ללא עור ועצם (כ-320-340 גרם)</li>
+      <li>1/4 כפית מלח</li>
+      <li>1/8 כפית פלפל שחור גרוס טרי</li>
+      <li>2 כפות קמח תפוחי אדמה או קורנפלור</li>
+      <li>2 כפות שמן ניטרלי (מחולק לשני סבבים, ועוד לפי הצורך)</li>
+      <li>חצי כפית שומשום לבן קלוי (לקישוט)</li>
+    </ul>
+
+    <h2>הוראות הכנה</h2>
+    <ol class="steps" dir="auto">
+      <li>מכינים את הרוטב: מערבבים גוצ'וג'אנג, מירין, דבש ורוטב סויה בקערה קטנה. קוצצים דק את השום ושומרים בצד.</li>
+      <li>חותכים את חזה העוף לריבועים בגודל כ-4 ס"מ בחיתוך אלכסוני, כך שהחתיכות יתבשלו באופן אחיד. מתבלים משני הצדדים במלח ובפלפל, ומצפים בקמח תפוחי האדמה/קורנפלור.</li>
+      <li>מחממים שמן במחבת על אש בינונית. מניחים חצי מכמות העוף בשכבה אחת, צורבים כ-3 דקות מצד אחד עד להזהבה, הופכים וצורבים עוד 2 דקות מהצד השני. מוציאים לצלחת.</li>
+      <li>מוסיפים את שאר העוף וצורבים כ-5 דקות (כ-3 דקות לכל צד).</li>
+      <li>מנגבים עודפי שומן מהמחבת, מוסיפים מעט שמן ומטגנים את השום עד לריח נעים. מחזירים את כל העוף למחבת.</li>
+      <li>יוצקים את הרוטב ומערבבים עד שהעוף מצופה היטב והרוטב מבעבע לעקביות מבריקה.</li>
+      <li>מעבירים לצלחת ומקשטים בשומשום קלוי.</li>
+    </ol>
+
+    <h2>הערות</h2>
+    <ul dir="auto">
+      <li>חיתוך אחיד (אלכסוני) גורם לחתיכות להתבשל באותו הקצב.</li>
+      <li>מטגנים בשני סבבים כדי לא לצפוף את המחבת.</li>
+      <li>אם משתמשים במחבת פלדת פחמן, כדאי להחזיק בצד 2-4 כפות מים לשחרור שאריות שנדבקות.</li>
+      <li>הגשה מומלצת: סלט נבטי סויה, מרק אטריות שקופות, אומלט יפני מגולגל (טמגויאקי), או ירקות כבושים יפניים (אסאזוקה).</li>
+      <li>מתכון מקור: <a href="https://www.justonecookbook.com/honey-gochujang-chicken/">justonecookbook.com</a></li>
+    </ul>
+  </main>
+
+  <script src="../tag-colors.js"></script>
+  <script>
+    document.querySelectorAll(".recipe-tag").forEach(el => {
+      el.classList.add(tagColorClass(el.dataset.tag));
+    });
+  </script>
+</body>
+</html>

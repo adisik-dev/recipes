@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>אצבעות שניצל לילדים | My Recipes</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" href="../icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="#3f5d4a" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#161512" media="(prefers-color-scheme: dark)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1><a href="../index.html"><img src="../icon-192.png" alt=""> My Recipes</a></h1>
+  </header>
+  <main>
+    <a class="back-link" href="../index.html">&larr; All recipes</a>
+    <h1 dir="auto">אצבעות שניצל לילדים</h1>
+    <div class="recipe-meta" dir="auto">
+      <span>⏱ כ-1.5 שעה (כולל קירור)</span>
+      <span>🍽 14 אצבעות</span>
+      <div class="recipe-tags" dir="auto">
+        <span class="recipe-tag" data-tag="אוכל לילדים">אוכל לילדים</span>
+        <span class="recipe-tag" data-tag="מנות עיקריות">מנות עיקריות</span>
+      </div>
+    </div>
+
+    <h2>מצרכים</h2>
+    <ul class="ingredients" dir="auto">
+      <li>חצי קילו בשר עוף טחון</li>
+      <li>בצל קטן קצוץ דק דק (לא חובה)</li>
+      <li>תפוח אדמה מגורד בינוני / גזר</li>
+      <li>3 כפות פטרוזיליה קצוצה</li>
+      <li>4 כפות שמן</li>
+      <li>כפית טחינה גולמית</li>
+      <li>כף סילאן / דבש</li>
+      <li>כפית פפריקה מתוקה מרוקאית</li>
+      <li>חצי כוס קמח / פירורי לחם</li>
+      <li>כפית מלאה אבקת מרק</li>
+      <li>חצי כפית מלח</li>
+      <li>חצי כפית פלפל שחור</li>
+      <li>פירורי לחם (להצפיית האצבעות)</li>
+      <li>2 כפות שומשום</li>
+    </ul>
+
+    <h2>הוראות הכנה</h2>
+    <ol class="steps" dir="auto">
+      <li>מחממים מחבת עם 2 כפות שמן ומטגנים את הבצל עד הזהבה.</li>
+      <li>מגררים את תפוח האדמה (חורים גדולים), מוסיפים לקערה עם הבצל המטוגן ושאר המצרכים (עוף טחון, פטרוזיליה, טחינה, סילאן, פפריקה, קמח/פירורי לחם, אבקת מרק, מלח ופלפל). מקררים במקרר כשעה.</li>
+      <li>מערבבים פירורי לחם ושומשום בצלחת, מעצבים את התערובת לאצבעות ומצפים בתערובת הפירורים.</li>
+      <li>לטיגון: מחממים שמן לחצי מגובה האצבעות ומטגנים עד הזהבה.<br>לאפייה: תנור בחום 180°C, 30 דקות, הופכים, ועוד 10-15 דקות.</li>
+      <li>מגישים עם קטשופ, מיונז, אלף האיים או צ'יפס.</li>
+    </ol>
+
+    <h2>הערות</h2>
+    <ul dir="auto">
+      <li>מתכון מקור: <a href="https://nikib.co.il/food-for-kids/33303/">nikib.co.il</a></li>
+    </ul>
+  </main>
+
+  <script src="../tag-colors.js"></script>
+  <script>
+    document.querySelectorAll(".recipe-tag").forEach(el => {
+      el.classList.add(tagColorClass(el.dataset.tag));
+    });
+  </script>
+</body>
+</html>

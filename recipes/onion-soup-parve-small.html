@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>מרק בצל פרווה בכמות קטנה | My Recipes</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" href="../icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="#3f5d4a" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#161512" media="(prefers-color-scheme: dark)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1><a href="../index.html"><img src="../icon-192.png" alt=""> My Recipes</a></h1>
+  </header>
+  <main>
+    <a class="back-link" href="../index.html">&larr; All recipes</a>
+    <h1 dir="auto">מרק בצל פרווה בכמות קטנה</h1>
+    <div class="recipe-meta" dir="auto">
+      <span>⏱ כ-40 דקות</span>
+      <span>🍽 2 מנות</span>
+      <div class="recipe-tags" dir="auto">
+        <span class="recipe-tag" data-tag="מרקים">מרקים</span>
+        <span class="recipe-tag" data-tag="צמחוני">צמחוני</span>
+      </div>
+    </div>
+
+    <h2>מצרכים</h2>
+    <ul class="ingredients" dir="auto">
+      <li>4-5 בצלים בינוניים</li>
+      <li>4 שיני שום חתוכות קטן</li>
+      <li>כפית גדושה קמח / קורנפלור / קמח תפוחי אדמה</li>
+      <li>שליש כוס מים קרים</li>
+      <li>3 כוסות מים</li>
+      <li>4 כפות שמן</li>
+      <li><strong>תבלינים:</strong> כף אבקת מרק עוף פרווה</li>
+      <li>כפית מרק בצל</li>
+      <li>חצי כפית מלח</li>
+      <li>חצי כפית פלפל שחור</li>
+    </ul>
+
+    <h2>הוראות הכנה</h2>
+    <ol class="steps" dir="auto">
+      <li>חותכים בצלים לקוביות קטנות ואחידות. מחממים סיר קטן עם 4 כפות שמן ומטגנים בצל על אש בינונית בסבלנות עד קבלת צבע זהוב עמוק.</li>
+      <li>מערבבים מדי פעם להשגת צבע אחיד. לאחר הזהבות, מוסיפים שום וממשיכים טיגון דקה-שתיים נוספות.</li>
+      <li>מערבבים מים קרים וקמח בכוס עד התמוססות מלאה. מוסיפים לסיר עם שאר המים והתבלינים.</li>
+      <li>מביאים לרתיחה, מכסים את הסיר, מנמיכים אש ומבשלים 20 דקות. בודקים תיבול לפני ההגשה.</li>
+    </ol>
+
+    <h2>הערות</h2>
+    <ul dir="auto">
+      <li>מתכון מקור: <a href="https://nikib.co.il/tosafot/vegetarian/162363/">nikib.co.il</a></li>
+    </ul>
+  </main>
+
+  <script src="../tag-colors.js"></script>
+  <script>
+    document.querySelectorAll(".recipe-tag").forEach(el => {
+      el.classList.add(tagColorClass(el.dataset.tag));
+    });
+  </script>
+</body>
+</html>

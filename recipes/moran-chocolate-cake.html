@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>עוגת שוקולד של מורן | My Recipes</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" href="../icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="#3f5d4a" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#161512" media="(prefers-color-scheme: dark)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1><a href="../index.html"><img src="../icon-192.png" alt=""> My Recipes</a></h1>
+  </header>
+  <main>
+    <a class="back-link" href="../index.html">&larr; All recipes</a>
+    <h1 dir="auto">עוגת שוקולד של מורן</h1>
+    <div class="recipe-meta" dir="auto">
+      <span>⏱ כ-40 דקות</span>
+      <span>🍽 עוגה אחת (כ-10 פרוסות)</span>
+      <div class="recipe-tags" dir="auto">
+        <span class="recipe-tag" data-tag="קינוחים">קינוחים</span>
+        <span class="recipe-tag" data-tag="עוגות">עוגות</span>
+      </div>
+    </div>
+
+    <h2>מצרכים</h2>
+    <ul class="ingredients" dir="auto">
+      <li><strong>לעוגה:</strong> כוס קמח</li>
+      <li>שקית אבקת אפייה</li>
+      <li>כוס שמן</li>
+      <li>כוס שוקולית</li>
+      <li>קורט מלח</li>
+      <li>3 כפות קקאו</li>
+      <li>כפית תמצית וניל</li>
+      <li>3/4 כוס סוכר</li>
+      <li>חצי כוס חלב</li>
+      <li>4 ביצים</li>
+      <li><strong>לציפוי:</strong> חצי כוס חלב או שמנת</li>
+      <li>100 גרם שוקולד מריר</li>
+    </ul>
+
+    <h2>הוראות הכנה</h2>
+    <ol class="steps" dir="auto">
+      <li>מחממים תנור ל-160°C.</li>
+      <li>מערבבים בקערה את המצרכים היבשים: קמח, אבקת אפייה, מלח וקקאו.</li>
+      <li>בקערה נפרדת מערבבים את המצרכים הרטובים: שמן, שוקולית, תמצית וניל, סוכר, חלב וביצים.</li>
+      <li>משלבים את התערובת הרטובה עם היבשה לבלילה אחידה, ויוצקים לתבנית משומנת.</li>
+      <li>אופים כ-20-30 דקות, עד שקיסם יוצא נקי.</li>
+      <li>לציפוי: מחממים חלב/שמנת עם השוקולד המריר במיקרוגל בפולסים קצרים, עד שהשוקולד נמס לגמרי. מערבבים לציפוי חלק ויוצקים על העוגה לאחר שהצטננה.</li>
+    </ol>
+  </main>
+
+  <script src="../tag-colors.js"></script>
+  <script>
+    document.querySelectorAll(".recipe-tag").forEach(el => {
+      el.classList.add(tagColorClass(el.dataset.tag));
+    });
+  </script>
+</body>
+</html>
