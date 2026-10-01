@@ -90,5 +90,11 @@ const RECIPES = [
     url: "recipes/dads-schnitzel.html",
     tags: ["מנות עיקריות", "איירפרייר"],
     time: "45 דקות"
+  },
+  {
+    title: "פרגיות עם אורז ועדשים כתומים בסיר אחד",
+    url: "recipes/pargiot-rice-lentils-one-pot.html",
+    tags: ["מנות עיקריות", "עוף", "בסיר אחד"],
+    time: "35 דקות"
   }
 ];
