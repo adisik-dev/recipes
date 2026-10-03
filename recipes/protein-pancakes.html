@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>פנקייק חלבון | המתכונים שלי</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" href="../icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="#3f5d4a" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#161512" media="(prefers-color-scheme: dark)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1><a href="../index.html"><img src="../icon-192.png" alt=""> המתכונים שלי</a></h1>
+  </header>
+  <main>
+    <a class="back-link" href="../index.html">&rarr; כל המתכונים</a>
+    <h1 dir="auto">פנקייק חלבון</h1>
+    <div class="recipe-meta" dir="auto">
+      <span>⏱ כ-10 דקות</span>
+      <span>🍽 מנה אחת (משוער)</span>
+      <div class="recipe-tags" dir="auto">
+        <span class="recipe-tag" data-tag="ארוחת בוקר">ארוחת בוקר</span>
+        <span class="recipe-tag" data-tag="חלבון">חלבון</span>
+      </div>
+    </div>
+
+    <h2>מצרכים</h2>
+    <ul class="ingredients" dir="auto">
+      <li>סקופ אבקת חלבון (30 גרם)</li>
+      <li>2 כפות קמח תופח</li>
+      <li>ביצה</li>
+      <li>כפית תמצית וניל</li>
+      <li>כף אחת ממתיק/סוכר</li>
+      <li>חלב בערך חצי כוס (אפשר להוסיף עוד, תלוי במרקם)</li>
+    </ul>
+
+    <h2>הוראות הכנה</h2>
+    <ol class="steps" dir="auto">
+      <li>מערבבים את הכל לתערובת אחידה עם מטרפה.</li>
+      <li>יוצקים על מחבת מעט משומנת, וברגע שיש מעט בועות הופכים.</li>
+      <li>מבשלים כ-5 שניות בלבד ומוציאים, כדי שלא יתייבש.</li>
+    </ol>
+
+    <h2>הערות</h2>
+    <ul dir="auto">
+      <li>מתכון של guy.shukrun באינסטגרם. מספר המנות משוער — לא צוין במקור.</li>
+    </ul>
+  </main>
+
+  <script src="../tag-colors.js"></script>
+  <script>
+    document.querySelectorAll(".recipe-tag").forEach(el => {
+      el.classList.add(tagColorClass(el.dataset.tag));
+    });
+  </script>
+</body>
+</html>

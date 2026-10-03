@@ -96,5 +96,11 @@ const RECIPES = [
     url: "recipes/pargiot-rice-lentils-one-pot.html",
     tags: ["מנות עיקריות", "עוף", "בסיר אחד"],
     time: "35 דקות"
+  },
+  {
+    title: "פנקייק חלבון",
+    url: "recipes/protein-pancakes.html",
+    tags: ["ארוחת בוקר", "חלבון"],
+    time: "10 דקות"
   }
 ];
