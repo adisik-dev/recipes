@@ -102,5 +102,11 @@ const RECIPES = [
     url: "recipes/protein-pancakes.html",
     tags: ["ארוחת בוקר", "חלבון"],
     time: "10 דקות"
+  },
+  {
+    title: "פרגיות ואורז אדום בסיר אחד",
+    url: "recipes/chicken-and-red-rice-one-pot.html",
+    tags: ["מנות עיקריות", "עוף", "בסיר אחד"],
+    time: "50 דקות"
   }
 ];
