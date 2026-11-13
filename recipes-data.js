@@ -108,5 +108,11 @@ const RECIPES = [
     url: "recipes/chicken-and-red-rice-one-pot.html",
     tags: ["מנות עיקריות", "עוף", "בסיר אחד"],
     time: "50 דקות"
+  },
+  {
+    title: "פוטטוס קריספיים באיירפרייר",
+    url: "recipes/crispy-potatoes-airfryer.html",
+    tags: ["תוספות", "איירפרייר", "צמחוני"],
+    time: "45 דקות"
   }
 ];

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>פוטטוס קריספיים באיירפרייר | המתכונים שלי</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" href="../icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="#3f5d4a" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#161512" media="(prefers-color-scheme: dark)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1><a href="../index.html"><img src="../icon-192.png" alt=""> המתכונים שלי</a></h1>
+  </header>
+  <main>
+    <a class="back-link" href="../index.html">&rarr; כל המתכונים</a>
+    <h1 dir="auto">פוטטוס קריספיים באיירפרייר</h1>
+    <div class="recipe-meta" dir="auto">
+      <span>⏱ כ-45 דקות</span>
+      <span>🍽 כ-4 מנות (משוער)</span>
+      <div class="recipe-tags" dir="auto">
+        <span class="recipe-tag" data-tag="תוספות">תוספות</span>
+        <span class="recipe-tag" data-tag="איירפרייר">איירפרייר</span>
+        <span class="recipe-tag" data-tag="צמחוני">צמחוני</span>
+      </div>
+    </div>
+
+    <h2>מצרכים</h2>
+    <ul class="ingredients" dir="auto">
+      <li>5-6 תפוחי אדמה בינוניים (אפשר להשאיר קליפה, לשטוף ולקרצף היטב)</li>
+      <li>2-3 כפות שמן זית</li>
+      <li>2 כפות קורנפלור (הסוד לפריכות!)</li>
+      <li>1 כף פפריקה מתוקה</li>
+      <li>1 כפית שום גבישי / אבקת שום</li>
+      <li>מלח ופלפל לפי הטעם</li>
+    </ul>
+
+    <h2>הוראות הכנה</h2>
+    <ol class="steps" dir="auto">
+      <li>חותכים כל תפוח אדמה לחצי, ואז כל חצי ל-2 או 3 פלחים (סירות).</li>
+      <li>בישול מקדים: מרתיחים מים בסיר, מוסיפים את הפלחים, ממתינים לרתיחה חוזרת וסופרים 7-10 דקות. הסכין צריכה להיכנס עם קצת התנגדות במרכז. מסננים ומייבשים היטב עם נייר סופג.</li>
+      <li>מתבלים: בקערה גדולה מערבבים את הפלחים היבשים עם שמן זית, קורנפלור, פפריקה, שום, מלח ופלפל, עד שכל פלח מצופה.</li>
+      <li>באיירפרייר: מסדרים בסלסלה בשכבה אחת, בלי להעמיס. 200°C, 15-20 דקות. אחרי 8-10 דקות פותחים ומנערים את הסלסלה.</li>
+      <li>מוכנים כשהם זהובים, פריכים מבחוץ ורכים מבפנים.</li>
+    </ol>
+
+    <h2>הערות</h2>
+    <ul dir="auto">
+      <li>מגישים עם קטשופ, מיונז או איולי.</li>
+      <li>גרסת בטטה: משרים 30 דקות במים קרים לפני הבישול ואופים ב-190°C כי היא נשרפת מהר.</li>
+      <li>זמן ומספר המנות משוערים — לא צוינו במקור.</li>
+    </ul>
+  </main>
+
+  <script src="../tag-colors.js"></script>
+  <script>
+    document.querySelectorAll(".recipe-tag").forEach(el => {
+      el.classList.add(tagColorClass(el.dataset.tag));
+    });
+  </script>
+</body>
+</html>
